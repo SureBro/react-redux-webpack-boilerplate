@@ -34,8 +34,8 @@ To test your application `npm run test`. This will test your app once and close.
 7. *ESLint*
 
 ##TODOs##
-- Support for SSR
-- Dynamic Document meta tags manager, perhaps react-helmet?  
+- [ ] Support for SSR
+- [ ] Dynamic Document meta tags manager, perhaps react-helmet?  
 
 
 With :heart: from [Surebro](https://surebro.com)
