@@ -54,7 +54,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
-      title: 'Counter Boilerplate',
+      title: 'Home Boilerplate',
       template: './app/template.ejs',
     }),
     new webpack.ProvidePlugin({
