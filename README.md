@@ -14,10 +14,10 @@ This boilerplate is setup with [Chai](https://github.com/chaijs/chai) and [Mocha
 To test your application `npm run test`. This will test your app once and close. To **watch** your tests, run `npm run test:watch`. This way your tests will run everytime you edit your code. This might be useful in certain scenarios.
 
 ## Project Structure Explanation ##
-* Will add a guide to where each part of the app should go *
+*Will add a guide to where each part of the app should go*
 
 ## Tech Stack ##
-* Will add brief explanation and links soon *
+*Will add brief explanation and links soon*
 
 1. *Koa*
 
