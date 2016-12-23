@@ -1,45 +1,45 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
 
-import Header1 from '../../components/headers/Headers';
+import HomePageContainer from '../../containers/homeContainer';
+import AboutPage from '../../pages/about/AboutPage';
+
+import Navbar from '../../components/navbar/Navbar';
+
+import store from '../../stores/counter/counterStore';
 
 require('./style.scss');
 
-const App = ({ counter, onIncrement, onDecrement }) => (
-  <div className="container">
-    <div className="row">
-      <div className="col-xs-6 col-xs-offset-3 padding20">
-        <div className="col-xs-4">
-          <button
-            className="btn btn-default center-block"
-            onClick={onDecrement}
-          >
-            -
-          </button>
-        </div>
-        <div className="col-xs-4">
-          <Header1
-            key="counter-holder"
-            text={counter}
-            className="text-center margin0 white"
-          />
-        </div>
-        <div className="col-xs-4">
-          <button
-            className="btn btn-default center-block"
-            onClick={onIncrement}
-          >
-            +
-          </button>
-        </div>
-      </div>
-    </div>
+const links = [
+  {
+    text: 'Home',
+    url: '/',
+  },
+  {
+    text: 'About',
+    url: '/about',
+  },
+];
+
+const Layout = props => (
+  <div>
+    <Navbar key="navbar" links={links} />
+    {
+      props.children
+    }
   </div>
 );
 
-export default App;
+const App = () => (
+  <Provider store={store}>
+    <Router history={browserHistory}>
+      <Route path="/" component={Layout}>
+        <IndexRoute component={HomePageContainer} />
+        <Route path="/about" component={AboutPage} />
+      </Route>
+    </Router>
+  </Provider>
+);
 
-App.propTypes = {
-  counter: PropTypes.string,
-  onIncrement: PropTypes.func,
-  onDecrement: PropTypes.func,
-};
+export default App;

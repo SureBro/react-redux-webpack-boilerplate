@@ -1,6 +1,8 @@
 @import 'app/styles/variables';
 @import 'app/styles/essentials';
+@import 'app/styles/mixins';
 
 body{
-  background-color: $primaryColor;
+  height: 100vh;
+  @include linear-gradient(-45deg, #F96DC8 0%, #EB4B98 100%)
 }
