@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 require('./style.scss');
 
 const Header1 = ({ text, className }) => (
-  <h1 className={`${className || ''}`}>{text}</h1>
+  <h1 className={`text ${className || ''}`}>{text}</h1>
 );
 export default Header1;
 

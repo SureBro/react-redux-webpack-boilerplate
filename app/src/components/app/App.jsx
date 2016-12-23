@@ -1,23 +1,17 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { PropTypes } from 'react';
 
-import Header1 from '../../components/headers/header1';
-import counterStore from '../../stores/counter/counterStore';
+import Header1 from '../../components/headers/Headers';
 
 require('./style.scss');
 
-const App = () => (
+const App = ({ counter, onIncrement, onDecrement }) => (
   <div className="container">
     <div className="row">
       <div className="col-xs-6 col-xs-offset-3 padding20">
         <div className="col-xs-4">
           <button
             className="btn btn-default center-block"
-            onClick={
-              () => counterStore.dispatch({
-                type: 'DECREMENT',
-              })
-            }
+            onClick={onDecrement}
           >
             -
           </button>
@@ -25,18 +19,14 @@ const App = () => (
         <div className="col-xs-4">
           <Header1
             key="counter-holder"
-            text={counterStore.getState().toString()}
-            className="text-center margin0"
+            text={counter}
+            className="text-center margin0 white"
           />
         </div>
         <div className="col-xs-4">
           <button
             className="btn btn-default center-block"
-            onClick={
-              () => counterStore.dispatch({
-                type: 'INCREMENT',
-              })
-            }
+            onClick={onIncrement}
           >
             +
           </button>
@@ -47,3 +37,9 @@ const App = () => (
 );
 
 export default App;
+
+App.propTypes = {
+  counter: PropTypes.string,
+  onIncrement: PropTypes.func,
+  onDecrement: PropTypes.func,
+};
