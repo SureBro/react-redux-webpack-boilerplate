@@ -9,9 +9,15 @@ Boilerplate set up with Koa-React, Babel, ESLint, Redux, Sass, Bootstrap, Mocha,
 5. Your app should be running on localhost:8080 unless you changed the port
 
 ## Tests ##
-This boilerplate is setup with [Chai](https://github.com/chaijs/chai) and [Mocha](https://github.com/mochajs/mocha) to handle testing. The main test files should be added to `/app/tests/`. You can have different test files for different modules or components wherever it makes sense but import them here so mocha can use it to test your application. 
+This boilerplate is setup with [Chai](https://github.com/chaijs/chai) and [Mocha](https://github.com/mochajs/mocha) to handle testing. The frontend test files should be added to `/app/tests/` and your api test files should be added to `/api/tests/`. 
 
-To test your application `npm run test`. This will test your app once and close. To **watch** your tests, run `npm run test:watch`. This way your tests will run everytime you edit your code. This might be useful in certain scenarios.
+You can test both parts of your apps individually. 
+
+For frontend tests, you can have different test files for different modules or components wherever it makes sense, *(same folder as the module/component the test is built for)* but import them in `/app/tests` or `/api/tests` so mocha can use it to test your application.
+
+To test your frontend application `npm run test`. This will test your app once and close. To **watch** your tests, run `npm run test:watch`. This way your tests will run everytime you edit your code. This might be useful in certain scenarios.
+
+Similarly, test your api with `npm run testserver` and **watch** them with `npm run testserver:watch`.
 
 ## Project Structure Explanation ##
 *Will add a guide to where each part of the app should go*
@@ -33,9 +39,10 @@ To test your application `npm run test`. This will test your app once and close.
 
 7. *ESLint*
 
-## TODOs ##
-- [ ] Support for SSR
-- [ ] Dynamic Document meta tags manager, perhaps react-helmet?  
+8. *React Helmet*
 
+## TODOs ##
+- [ ] Support for SSR  
+- [ ] Instanbul to test Code Coverage
 
 With :heart: from [Surebro](https://surebro.com)
