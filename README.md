@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/316b0b7d9e954f3b847d4bff62ae5162)](https://www.codacy.com/app/SureBro/react-redux-webpack-boilerplate?utm_source=github.com&utm_medium=referral&utm_content=SureBro/react-redux-webpack-boilerplate&utm_campaign=badger)
 # react-redux-webpack-boilerplate [![Build Status](https://travis-ci.org/SureBro/react-redux-webpack-boilerplate.svg?branch=master)](https://travis-ci.org/SureBro/react-redux-webpack-boilerplate) [![Dependency Status](https://gemnasium.com/badges/github.com/SureBro/react-redux-webpack-boilerplate.svg)](https://gemnasium.com/github.com/SureBro/react-redux-webpack-boilerplate)
 
 Boilerplate set up with Koa-React, Babel, ESLint, Redux, Sass, Bootstrap, Mocha, Chai, Webpack. **This is still a work in progress**
