@@ -1,4 +1,4 @@
-# react-redux-webpack-boilerplate #
+# react-redux-webpack-boilerplate [![Build Status](https://travis-ci.org/SureBro/react-redux-webpack-boilerplate.svg?branch=master)](https://travis-ci.org/SureBro/react-redux-webpack-boilerplate)
 Boilerplate set up with Koa-React, Babel, ESLint, Redux, Sass, Bootstrap, Mocha, Chai, Webpack. **This is still a work in progress**
 
 ## Installation and Getting it started ##
